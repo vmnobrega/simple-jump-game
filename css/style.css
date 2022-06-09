@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: rgb(51, 49, 49);
+}
+
+.game-board {
+    width: 60%;
+    height: 500px;
+    border: 1px solid black;
+    border-bottom: 10px solid gray;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 21%;
+    transform: translate(0, -50%);
+    overflow: hidden;
+    background-color: rgb(181, 137, 223);
+    background: linear-gradient(rgb(41, 43, 212), rgb(185, 119, 240));
+}
+
+.game-board h1 {
+    padding-left: 15px;
+    padding-top: 5px;
+    font-size: 40px;
+    font-family: 'VT323', monospace;
+    letter-spacing: 8px;
+    color: white;
+    
+}
+
+.fundo {
+    height: 500px;
+    width: 1600px;
+    position: absolute;
+    animation: scroll 5s linear infinite;
+     
+}
+
+.buildings {
+    width: 400px;
+    bottom: 0;
+    position: absolute;
+    animation: scroll 5s linear infinite;
+    right: -400px;
+}
+
+.fogo {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    animation: fogo-animation 2s infinite linear;
+    
+        
+}
+
+.personagem {
+    position: absolute;
+    bottom: 0px;
+    left: 70px
+    
+}
+
+.jump { 
+    animation: jump 600ms ease-out;
+
+}
+
+
+
+@keyframes fogo-animation {
+    from {
+        right: -120px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 140px;
+    }
+
+    50% {
+        bottom: 140px;
+    }
+
+    60% {
+        bottom: 140px;
+    }
+
+    100% {
+        bottom: 0; 
+    }
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
